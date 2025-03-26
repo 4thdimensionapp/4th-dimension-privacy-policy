@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion Request - THE 4TH DIMENSION</title>
+    <style>
+        :root {
+            --primary-color: #7667db;
+            --secondary-color: #3a3356;
+            --background-color: #1a1a1f;
+            --card-background: #222228;
+            --text-color: #f5f5f7;
+            --text-muted: #9e9ea7;
+            --danger-color: #CB4335;
+            --border-color: #333340;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: var(--text-color);
+            margin-top: 30px;
+        }
+        
+        .container {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(118, 103, 219, 0.2);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            background-color: var(--danger-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #b83b2e;
+        }
+        
+        .info-text {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .warning {
+            background-color: rgba(203, 67, 53, 0.1);
+            border-left: 4px solid var(--danger-color);
+            padding: 15px;
+            margin: 20px 0;
+            color: var(--text-color);
+        }
+        
+        .app-info {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        
+        .status-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .success {
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid #2ecc71;
+            color: #2ecc71;
+        }
+        
+        .error {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+            color: #e74c3c;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE 4TH DIMENSION</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>Account Deletion Request</h2>
+            
+            <p>Use this form to request the deletion of your THE 4TH DIMENSION account and all associated data. Please note that this action cannot be undone.</p>
+            
+            <div class="warning">
+                <strong>Important:</strong> Account deletion is permanent. All your data will be permanently removed, including:
+                <ul>
+                    <li>Profile information</li>
+                    <li>Saved intentions and manifestations</li>
+                    <li>Journal entries and notes</li>
+                    <li>Quantum points and saved locations</li>
+                    <li>Token balance and purchase history</li>
+                    <li>Subscription information</li>
+                </ul>
+            </div>
+            
+            <form id="accountDeletionForm" action="https://formspree.io/f/mrbplrwd" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address (associated with your account):</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="info-text">We'll use this to identify your account.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Reason for Deletion (optional):</label>
+                    <select id="reason" name="reason">
+                        <option value="">Please select (optional)</option>
+                        <option value="privacy">Privacy concerns</option>
+                        <option value="not-using">No longer using the app</option>
+                        <option value="data">Want to remove my data</option>
+                        <option value="experience">Had a negative experience</option>
+                        <option value="other">Other reason</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Additional Comments (optional):</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm">Please type "DELETE" to confirm:</label>
+                    <input type="text" id="confirm" name="confirm" required pattern="DELETE">
+                    <p class="info-text">Type the word "DELETE" in all caps to confirm</p>
+                </div>
+                
+                <button type="submit">Submit Deletion Request</button>
+                <p class="info-text">We'll process your request within 14 business days and send a confirmation to your email.</p>
+            </form>
+            
+            <div id="successMessage" class="status-message success">
+                Your account deletion request has been submitted successfully. We'll process your request within 14 business days and send a confirmation to your email.
+            </div>
+            
+            <div id="errorMessage" class="status-message error">
+                There was an error submitting your request. Please try again or contact us directly at the4thdimensionapp@gmail.com.
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2>Alternative Methods</h2>
+            <p>If you prefer, you can also delete your account directly from within THE 4TH DIMENSION app:</p>
+            <ol>
+                <li>Open THE 4TH DIMENSION app</li>
+                <li>Go to the Settings screen</li>
+                <li>Scroll down to the Account section</li>
+                <li>Tap on "Delete Account"</li>
+                <li>Follow the on-screen instructions to confirm</li>
+            </ol>
+            <p>This will immediately delete your account and all associated data.</p>
+        </div>
+        
+        <div class="app-info">
+            <p>THE 4TH DIMENSION - Explore The Quantum Reality</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 THE 4TH DIMENSION Development Team. All rights reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    
+    <script>
+        document.getElementById('accountDeletionForm').addEventListener('submit', function(event) {
+            // We'll let the form submit naturally to Formspree
+            // But we'll also show a success message after submission
+            
+            // Note: In a production environment, we would validate the form
+            // and handle errors properly. This is simplified for this example.
+            
+            // Store a reference to the form
+            const form = this;
+            
+            // Submit the form to Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Hide the form
+                    form.style.display = 'none';
+                    
+                    // Show success message
+                    document.getElementById('successMessage').style.display = 'block';
+                    
+                    // Scroll to the success message
+                    document.getElementById('successMessage').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Show error message
+                    document.getElementById('errorMessage').style.display = 'block';
+                    
+                    // Scroll to the error message
+                    document.getElementById('errorMessage').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            })
+            .catch(error => {
+                // Show error message
+                document.getElementById('errorMessage').style.display = 'block';
+                console.error('Error:', error);
+            });
+            
+            // Prevent the default form submission
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
